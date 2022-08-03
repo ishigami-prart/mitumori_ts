@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+type PriceType = {
+    koumoku:string;
+    tanka:number;
+    suuryou:number;
+    tani:string;
+    goukei:number;
+}
+
 export default function App() {
   const [koumokuText, setKoumokuText] = useState<string>("");
   const [tankaText, setTankaText] = useState<number>();
