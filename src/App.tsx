@@ -14,14 +14,14 @@ export default function App() {
   const [tankaText, setTankaText] = useState<number>();
   const [suuryouText, setSuuryouText] = useState<number>();
   const [taniText, setTaniText] = useState<string>("");
-  const [price, setPrice] = useState([]);
+  const [price, setPrice] = useState<Array<PriceType>>([]);
 
-  const onChangeKoumokuText = (event:string) => setKoumokuText(event.target.value);
-  const onChangeTankaText = (event:number) => setTankaText(event.target.value);
-  const onChangeSuuryouText = (event:number) => {
+  const onChangeKoumokuText = (event: React.FormEvent<HTMLInputElement>) => setKoumokuText(event.target.value);
+  const onChangeTankaText = (event: React.FormEvent<HTMLInputElement>) => setTankaText(event.target.value);
+  const onChangeSuuryouText = (event: React.FormEvent<HTMLInputElement>) => {
     setSuuryouText(event.target.value);
   };
-  const onChangeTaniText = (event:string) => setTaniText(event.target.value);
+  const onChangeTaniText = (event: React.FormEvent<HTMLInputElement>) => setTaniText(event.target.value);
   console.log("単価" + tankaText);
   console.log("数量" + suuryouText);
 
