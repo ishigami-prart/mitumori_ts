@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [koumokuText, setKoumokuText] = useState("");
-  const [tankaText, setTankaText] = useState("");
-  const [suuryouText, setSuuryouText] = useState("");
-  const [taniText, setTaniText] = useState("");
+  const [koumokuText, setKoumokuText] = useState<string>("");
+  const [tankaText, setTankaText] = useState<number>();
+  const [suuryouText, setSuuryouText] = useState<number>();
+  const [taniText, setTaniText] = useState<string>("");
   const [price, setPrice] = useState([]);
 
-  const onChangeKoumokuText = (event) => setKoumokuText(event.target.value);
-  const onChangeTankaText = (event) => setTankaText(event.target.value);
-  const onChangeSuuryouText = (event) => {
+  const onChangeKoumokuText = (event:string) => setKoumokuText(event.target.value);
+  const onChangeTankaText = (event:number) => setTankaText(event.target.value);
+  const onChangeSuuryouText = (event:number) => {
     setSuuryouText(event.target.value);
   };
-  const onChangeTaniText = (event) => setTaniText(event.target.value);
+  const onChangeTaniText = (event:string) => setTaniText(event.target.value);
   console.log("単価" + tankaText);
   console.log("数量" + suuryouText);
 
