@@ -63,48 +63,7 @@ export default function App() {
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Router />
-        <div className="input_erea">
-          <input
-            placeholder="項目"
-            value={koumokuText}
-            onChange={onChangeKoumokuText}
-          />
-          <input
-            type="number"
-            placeholder="単価"
-            value={tanka}
-            onChange={onChangeTanka}
-          />
-          <input
-            type="number"
-            placeholder="数量"
-            value={suuryou}
-            onChange={onChangeSuuryou}
-          />
-          <input
-            placeholder="単位"
-            value={taniText}
-            onChange={onChangeTaniText}
-          />
-          <Button
-            onClick={onClickAdd}
-            colorScheme='teal'
-            size='md'
-          >追加</Button>
-        </div>
-
-        {price.map((s, index) => {
-          return (
-            <div key={index} className="mitumori_table">
-              <p>{s.koumoku}</p>
-              <p>{s.tanka}</p>
-              <p>{s.suuryou}</p>
-              <p>{s.tani}</p>
-              <p>{s.goukei}円</p>
-            </div>
-          );
-        })}
-        <div className="ddd">{total}</div>
+    
       </BrowserRouter>
     </ChakraProvider>
   );
